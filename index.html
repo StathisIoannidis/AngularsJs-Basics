@@ -4,15 +4,17 @@
   <head>
     <link rel="stylesheet" href="lib/style.css" />
     <script src="lib/script.js"></script>
+    <script src="lib/github.js"></script>
   </head>
 
-  <body ng-app="plunker" ng-cloak>
+  <body ng-app="githubViewer" ng-cloak>
     <div ng-controller="MainCtrl">
       <h1>{{name}}</h1>
       <h2>{{message}} below</h2>
       <div>{{error}}</div>
       <hr />
 
+      {{countdown}}
       <form ng-submit="search(username)">
         <input
           type="search"
@@ -23,8 +25,7 @@
         <input type="submit" value="Search" />
       </form>
 
-      <div ng-include="'userdetails.html'" ng-show="user">
-      </div>
+      <div ng-include="'userdetails.html'" ng-show="user"></div>
     </div>
   </body>
 </html>
